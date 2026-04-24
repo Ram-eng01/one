@@ -5,10 +5,10 @@ trigger:
 pool:
   name: flm-agent
 steps:
-   
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
+    goals: 'clean package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
